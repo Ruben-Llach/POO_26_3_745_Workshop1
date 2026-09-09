@@ -311,21 +311,34 @@ public double promedioElementos(int[] arreglo) {
 
    
 
- // Método que cuenta los caracteres en una cadena
+           // Método que cuenta los caracteres en una cadena
     public int contarCaracteres(String cadena) {
         // TODO: Implementar el método para contar el número de caracteres en una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser 5.
-        return 0;
+
+        return cadena.length();
     }
+
 
     // Método que invierte una cadena
     public String invertirCadena(String cadena) {
         // TODO: Implementar el método para invertir una cadena.
         // Ejemplo: Si cadena = "Hello", el resultado debería ser "olleH".
-        return "";
-    }
 
-    // Método que verifica si una cadena es un palíndromo
+        String resultado = "";
+
+        for (int i = cadena.length() - 1; i >= 0; i--) {
+            resultado += cadena.charAt(i);
+        }
+
+        return resultado;
+    }
+ 
+
+    
+
+
+       // Método que verifica si una cadena es un palíndromo
     public boolean esPalindromo(String cadena) {
         // TODO: Implementar el método para verificar si una cadena es un palíndromo.
         // Ejemplo: Si cadena = "madam", el resultado debería ser true.
