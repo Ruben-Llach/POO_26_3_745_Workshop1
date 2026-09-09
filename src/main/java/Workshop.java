@@ -5,6 +5,8 @@ public class Workshop {
 
     }
 
+
+
     // Método que suma dos números enteros
     public int sumarDosNumeros(int a, int b) {
         // TODO: Implementar el método para retornar la suma de dos números enteros.
@@ -12,6 +14,8 @@ public class Workshop {
         //return a+b;
 	return a+b;
     }
+
+
 
     // Método que encuentra el mayor de tres números enteros
     public int mayorDeTresNumeros(int a, int b, int c) {
@@ -22,7 +26,9 @@ public class Workshop {
       return c;
     }
 
-    // Método que retorna la tabla de multiplicar de un número
+ 
+
+   // Método que retorna la tabla de multiplicar de un número
 public int[] tablaMultiplicar(int numero, int limite) {
     // TODO: Implementar el método para retornar la tabla de multiplicar del número dado.
     // Ejemplo: Si numero = 2 y limite = 5, el resultado debería ser [2, 4, 6, 8, 10].
@@ -35,7 +41,9 @@ public int[] tablaMultiplicar(int numero, int limite) {
     return resultado;
 }
 
-    // Método que calcula el factorial de un número entero
+ 
+
+   // Método que calcula el factorial de un número entero
     public int factorial(int n) {
         // TODO: Implementar el método para calcular el factorial de un número entero.
         // Ejemplo: Si n = 5, el resultado debería ser 120.
@@ -54,7 +62,9 @@ return resultado;
 
     }
 
-    // Método que verifica si un número es primo
+  
+
+  // Método que verifica si un número es primo
 public boolean esPrimo(int numero) {
     // TODO: Implementar el método para verificar si un número es primo.
     // Ejemplo: Si numero = 7, el resultado debería ser true.
@@ -73,20 +83,51 @@ public boolean esPrimo(int numero) {
 }
     
 
+
+
     // Método que genera una serie de Fibonacci
     public int[] serieFibonacci(int n) {
-        // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
-        // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
-        // Lanzar IllegalArgumentException si n es negativo.
-        return new int[0];
+    // TODO: Implementar el método para generar la serie de Fibonacci hasta el número n.
+    // Ejemplo: Si n = 5, el resultado debería ser [0, 1, 1, 2, 3].
+    // Lanzar IllegalArgumentException si n es negativo.
+
+    if (n < 0) {
+        throw new IllegalArgumentException("El número no puede ser negativo");
     }
 
-    // Método que suma todos los elementos de un arreglo
-    public int sumaElementos(int[] arreglo) {
-        // TODO: Implementar el método para sumar todos los elementos de un arreglo.
-        // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser 15.
-        return 0;
+    int[] resultado = new int[n];
+
+    if (n > 0) {
+        resultado[0] = 0;
     }
+
+    if (n > 1) {
+        resultado[1] = 1;
+    }
+
+    for (int i = 2; i < n; i++) {
+        resultado[i] = resultado[i - 1] + resultado[i - 2];
+    }
+
+    return resultado;
+}
+    
+
+    
+
+    // Método que suma todos los elementos de un arreglo
+public int sumaElementos(int[] arreglo) {
+    int suma = 0;
+
+    for (int numero : arreglo) {
+        suma += numero;
+    }
+
+    return suma;
+}
+
+
+
 
     // Método que calcula el promedio de los elementos de un arreglo
     public double promedioElementos(int[] arreglo) {
