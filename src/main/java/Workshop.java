@@ -339,27 +339,43 @@ public double promedioElementos(int[] arreglo) {
 
 
        // Método que verifica si una cadena es un palíndromo
-    public boolean esPalindromo(String cadena) {
-        // TODO: Implementar el método para verificar si una cadena es un palíndromo.
-        // Ejemplo: Si cadena = "madam", el resultado debería ser true.
-        return false;
-    }
+public boolean esPalindromo(String cadena) {
+    String limpia = cadena.replaceAll("\\s+", "").toLowerCase();
+    String invertida = invertirCadena(limpia);
+    return limpia.equals(invertida);
+}
 
-    // Método que cuenta el número de palabras en una cadena
-    public int contarPalabras(String cadena) {
-        // TODO: Implementar el método para contar el número de palabras en una cadena.
-        // Ejemplo: Si cadena = "Este es un test", el resultado debería ser 4.
+
+
+
+
+
+
+// Método que cuenta el número de palabras de una cadena
+public int contarPalabras(String cadena) {
+    if (cadena == null || cadena.trim().isEmpty()) {
         return 0;
     }
 
-    // Método que convierte una cadena a mayúsculas
+    return cadena.trim().split("\\s+").length;
+}
+ 
+
+
+
+
+       // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
         // TODO: Implementar el método para convertir una cadena a mayúsculas.
         // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
         return "";
     }
 
-    // Método que convierte una cadena a minúsculas
+   
+
+
+
+ // Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
         // TODO: Implementar el método para convertir una cadena a minúsculas.
         // Ejemplo: Si cadena = "HELLO", el resultado debería ser "hello".
