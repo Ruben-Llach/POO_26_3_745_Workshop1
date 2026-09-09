@@ -198,7 +198,7 @@ public double promedioElementos(int[] arreglo) {
     }
 
 
-        // Método que invierte un arreglo
+                // Método que invierte un arreglo
     public int[] invertirArreglo(int[] arreglo) {
         // TODO: Implementar el método para invertir un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 3, 4, 5], el resultado debería ser [5, 4, 3, 2, 1].
@@ -216,14 +216,30 @@ public double promedioElementos(int[] arreglo) {
 
    
 
- // Método que ordena un arreglo en orden ascendente
+         // Método que ordena un arreglo en orden ascendente
     public int[] ordenarArreglo(int[] arreglo) {
         // TODO: Implementar el método para ordenar un arreglo en orden ascendente.
         // Ejemplo: Si arreglo = [5, 4, 3, 2, 1], el resultado debería ser [1, 2, 3, 4, 5].
-        return new int[0];
+
+        int[] resultado = arreglo.clone();
+
+        for (int i = 0; i < resultado.length - 1; i++) {
+            for (int j = 0; j < resultado.length - 1 - i; j++) {
+                if (resultado[j] > resultado[j + 1]) {
+                    int temporal = resultado[j];
+                    resultado[j] = resultado[j + 1];
+                    resultado[j + 1] = temporal;
+                }
+            }
+        }
+
+        return resultado;
     }
 
-    // Método que elimina los duplicados de un arreglo
+  
+
+
+  // Método que elimina los duplicados de un arreglo
     public int[] eliminarDuplicados(int[] arreglo) {
         // TODO: Implementar el método para eliminar los duplicados de un arreglo.
         // Ejemplo: Si arreglo = [1, 2, 2, 3, 4, 4, 5], el resultado debería ser [1, 2, 3, 4, 5].
