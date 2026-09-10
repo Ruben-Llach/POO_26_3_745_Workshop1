@@ -388,21 +388,35 @@ public int contarPalabras(String cadena) {
 
 
 
-  // Método que reemplaza una subcadena en una cadena por otra subcadena
-    public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
-        // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
-        // Ejemplo: Si cadena = "Hello Java", antiguaSubcadena = "Java", y nuevaSubcadena = "world", el resultado debería ser "Hello world".
-        return "";
+        // Método que reemplaza una subcadena por otra
+    public String reemplazarSubcadena(String cadena, String objetivo, String reemplazo) {
+        // TODO: Implementar el método para reemplazar una subcadena por otra.
+        // Ejemplo: Si cadena = "Hola mundo", objetivo = "mundo" y reemplazo = "a todos",
+        // el resultado debería ser "Hola a todos".
+
+        return cadena.replace(objetivo, reemplazo);
     }
 
-    // Método que busca una subcadena en una cadena y retorna su índice
+  
+
+
+
+       
+
+        // Método que busca una subcadena dentro de una cadena
     public int buscarSubcadena(String cadena, String subcadena) {
-        // TODO: Implementar el método para buscar una subcadena en una cadena y retornar su índice.
-        // Ejemplo: Si cadena = "Hello world" y subcadena = "world", el resultado debería ser 6.
-        return -1;
+        // TODO: Implementar el método para buscar una subcadena dentro de una cadena.
+        // Ejemplo: Si cadena = "Hola mundo" y subcadena = "mundo",
+        // el resultado debería ser 5.
+
+        return cadena.indexOf(subcadena);
     }
 
-    // Método que valida un correo electrónico
+    
+
+
+
+// Método que valida un correo electrónico
     public boolean validarCorreoElectronico(String correo) {
         // TODO: Implementar el método para validar un correo electrónico.
         // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
