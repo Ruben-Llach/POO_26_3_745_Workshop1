@@ -364,25 +364,31 @@ public int contarPalabras(String cadena) {
 
 
 
-       // Método que convierte una cadena a mayúsculas
+        // Método que convierte una cadena a mayúsculas
     public String convertirAMayusculas(String cadena) {
         // TODO: Implementar el método para convertir una cadena a mayúsculas.
-        // Ejemplo: Si cadena = "hello", el resultado debería ser "HELLO".
-        return "";
+        // Ejemplo: Si cadena = "hola mundo", el resultado debería ser "HOLA MUNDO".
+
+        return cadena.toUpperCase();
     }
 
    
 
 
 
- // Método que convierte una cadena a minúsculas
+        // Método que convierte una cadena a minúsculas
     public String convertirAMinusculas(String cadena) {
         // TODO: Implementar el método para convertir una cadena a minúsculas.
-        // Ejemplo: Si cadena = "HELLO", el resultado debería ser "hello".
-        return "";
+        // Ejemplo: Si cadena = "HOLA MUNDO", el resultado debería ser "hola mundo".
+
+        return cadena.toLowerCase();
     }
 
-    // Método que reemplaza una subcadena en una cadena por otra subcadena
+  
+
+
+
+  // Método que reemplaza una subcadena en una cadena por otra subcadena
     public String reemplazarSubcadena(String cadena, String antiguaSubcadena, String nuevaSubcadena) {
         // TODO: Implementar el método para reemplazar una subcadena en una cadena por otra subcadena.
         // Ejemplo: Si cadena = "Hello Java", antiguaSubcadena = "Java", y nuevaSubcadena = "world", el resultado debería ser "Hello world".
