@@ -536,34 +536,63 @@ public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
       
 
 
-
+     
     public String pptls2(String game[]) {
-        //Retornar player ganador o empate
-            /*
-            Rock = R
-            Paper = P
-            Scissors = S
-            Lizard = L
-            Spock = V
-        Scissors cuts Paper
-Paper covers Rock
-Rock crushes Lizard
-Lizard poisons Spock
-Spock smashes Scissors
-Scissors decapitates Lizard
-Lizard eats Paper
-Paper disproves Spock
-Spock vaporizes Rock
-Rock crushes Scissors
-         */
-        return "";
+    
+    // Retornar player ganador o empate
+    /*
+    Rock = R
+    Paper = P
+    Scissors = S
+    Lizard = L
+    Spock = V
+    */
+
+    String jugador1 = game[0];
+    String jugador2 = game[1];
+
+    if (jugador1.equals(jugador2)) {
+        return "Empate";
     }
 
-    public double areaCirculo(double radio) {
+    if (jugador1.equals("S") &&
+            (jugador2.equals("P") || jugador2.equals("L"))) {
+        return "Player 1";
+    }
+
+    if (jugador1.equals("P") &&
+            (jugador2.equals("R") || jugador2.equals("V"))) {
+        return "Player 1";
+    }
+
+    if (jugador1.equals("R") &&
+            (jugador2.equals("L") || jugador2.equals("S"))) {
+        return "Player 1";
+    }
+
+    if (jugador1.equals("L") &&
+            (jugador2.equals("V") || jugador2.equals("P"))) {
+        return "Player 1";
+    }
+
+    if (jugador1.equals("V") &&
+            (jugador2.equals("S") || jugador2.equals("R"))) {
+        return "Player 1";
+    }
+
+    return "Player 2";
+}
+ 
+
+
+   public double areaCirculo(double radio) {
         return 0.0;
     }
 
-    public String zoodiac(int day, int month) {
+ 
+
+
+   public String zoodiac(int day, int month) {
         return "";
     }
 
