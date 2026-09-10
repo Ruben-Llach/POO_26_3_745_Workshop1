@@ -416,22 +416,42 @@ public int contarPalabras(String cadena) {
 
 
 
-// Método que valida un correo electrónico
+        
+        // Método que valida si una cadena es un correo electrónico válido
     public boolean validarCorreoElectronico(String correo) {
         // TODO: Implementar el método para validar un correo electrónico.
-        // Ejemplo: Si correo = "test@example.com", el resultado debería ser true.
-        return false;
+        // Ejemplo: "ejemplo@correo.com" debería retornar true.
+
+        return correo.matches("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+$");
     }
 
-    // Método que calcula el promedio de una lista de números
+      
 
+
+
+        // Método que calcula el promedio de una lista de números
     public double promedioLista(List<Integer> lista) {
-        // TODO: Implementar el método para calcular el promedio de una lista de números.
+        // TODO: Implementar el método para calcular el promedio de una lista.
         // Ejemplo: Si lista = [1, 2, 3, 4, 5], el resultado debería ser 3.0.
-        return 0.0;
+
+        if (lista.isEmpty()) {
+            return 0.0;
+        }
+
+        int suma = 0;
+
+        for (int numero : lista) {
+            suma += numero;
+        }
+
+        return (double) suma / lista.size();
     }
 
-    // Método que convierte un número en su representación binaria
+   
+
+
+
+        // Método que convierte un número en su representación binaria
     public String convertirABinario(int numero) {
         // TODO: Implementar el método para convertir un número en su representación binaria.
         // Ejemplo: Si numero = 10, el resultado debería ser "1010".
