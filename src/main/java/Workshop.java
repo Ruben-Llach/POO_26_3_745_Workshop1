@@ -485,7 +485,7 @@ public int contarPalabras(String cadena) {
 
 
 
-    // Método para el juego de piedra, papel, tijera, lagarto, Spock
+   // Método para el juego de piedra, papel, tijera, lagarto, Spock
 public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
     // TODO: Implementar el método para el juego de Piedra, Papel, Tijera, Lagarto, Spock.
     // Las reglas del juego son:
@@ -497,36 +497,46 @@ public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
 
     String[] opciones = {"Piedra", "Papel", "Tijera", "Lagarto", "Spock"};
 
-    int numeroAleatorio = (int) (Math.random() * opciones.length);
+    int numeroAleatorio = (int) (Math.random() * 5);
     String eleccionComputadora = opciones[numeroAleatorio];
 
     if (eleccionUsuario.equals(eleccionComputadora)) {
         return "Empate";
     }
 
-    if (eleccionUsuario.equals("Piedra") &&
-            (eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Lagarto"))) {
-        return "Ganaste";
+    if (eleccionUsuario.equals("Piedra")) {
+        if (eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Lagarto")) {
+            return "Ganaste";
+        }
+        return "Perdiste";
     }
 
-    if (eleccionUsuario.equals("Papel") &&
-            (eleccionComputadora.equals("Piedra") || eleccionComputadora.equals("Spock"))) {
-        return "Ganaste";
+    if (eleccionUsuario.equals("Papel")) {
+        if (eleccionComputadora.equals("Piedra") || eleccionComputadora.equals("Spock")) {
+            return "Ganaste";
+        }
+        return "Perdiste";
     }
 
-    if (eleccionUsuario.equals("Tijera") &&
-            (eleccionComputadora.equals("Papel") || eleccionComputadora.equals("Lagarto"))) {
-        return "Ganaste";
+    if (eleccionUsuario.equals("Tijera")) {
+        if (eleccionComputadora.equals("Papel") || eleccionComputadora.equals("Lagarto")) {
+            return "Ganaste";
+        }
+        return "Perdiste";
     }
 
-    if (eleccionUsuario.equals("Lagarto") &&
-            (eleccionComputadora.equals("Spock") || eleccionComputadora.equals("Papel"))) {
-        return "Ganaste";
+    if (eleccionUsuario.equals("Lagarto")) {
+        if (eleccionComputadora.equals("Spock") || eleccionComputadora.equals("Papel")) {
+            return "Ganaste";
+        }
+        return "Perdiste";
     }
 
-    if (eleccionUsuario.equals("Spock") &&
-            (eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Piedra"))) {
-        return "Ganaste";
+    if (eleccionUsuario.equals("Spock")) {
+        if (eleccionComputadora.equals("Tijera") || eleccionComputadora.equals("Piedra")) {
+            return "Ganaste";
+        }
+        return "Perdiste";
     }
 
     return "Perdiste";
@@ -600,14 +610,22 @@ public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
         return "Invalid Date";
     }
 
+    if (month == 2 && day > 28) {
+        return "Invalid Date";
+    }
+
+    if ((month == 4 || month == 6 || month == 9 || month == 11) && day > 30) {
+        return "Invalid Date";
+    }
+
     if ((month == 3 && day >= 21) || (month == 4 && day <= 19)) {
         return "Aries";
     } else if ((month == 4 && day >= 20) || (month == 5 && day <= 20)) {
-        return "Tauro";
+        return "Taurus";
     } else if ((month == 5 && day >= 21) || (month == 6 && day <= 20)) {
-        return "Géminis";
+        return "Gemini";
     } else if ((month == 6 && day >= 21) || (month == 7 && day <= 22)) {
-        return "Cáncer";
+        return "Cancer";
     } else if ((month == 7 && day >= 23) || (month == 8 && day <= 22)) {
         return "Leo";
     } else if ((month == 8 && day >= 23) || (month == 9 && day <= 22)) {
@@ -615,15 +633,15 @@ public String jugarPiedraPapelTijeraLagartoSpock(String eleccionUsuario) {
     } else if ((month == 9 && day >= 23) || (month == 10 && day <= 22)) {
         return "Libra";
     } else if ((month == 10 && day >= 23) || (month == 11 && day <= 21)) {
-        return "Escorpio";
+        return "Scorpio";
     } else if ((month == 11 && day >= 22) || (month == 12 && day <= 21)) {
-        return "Sagitario";
+        return "Sagittarius";
     } else if ((month == 12 && day >= 22) || (month == 1 && day <= 19)) {
-        return "Capricornio";
+        return "Capricorn";
     } else if ((month == 1 && day >= 20) || (month == 2 && day <= 18)) {
-        return "Acuario";
+        return "Aquarius";
     } else if ((month == 2 && day >= 19) || (month == 3 && day <= 20)) {
-        return "Piscis";
+        return "Pisces";
     }
 
     return "Invalid Date";
